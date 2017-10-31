@@ -56,7 +56,7 @@
                                 <state key="normal" title="Button" image="udnie"/>
                             </button>
                             <button opaque="NO" tag="3" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wez-Zd-kBo">
-                                <rect key="frame" x="187.5" y="553" width="187" height="114"/>
+                                <rect key="frame" x="187" y="553" width="187.5" height="114"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Button" image="candy"/>
                             </button>

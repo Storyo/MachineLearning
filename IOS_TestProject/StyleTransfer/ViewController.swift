@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  StyleTransfer
-//
-//  Created by Oleg Poyaganov on 02/08/2017.
-//  Copyright © 2017 Prisma Labs, Inc. All rights reserved.
-//
-
 import UIKit
 import MobileCoreServices
 import Photos
