@@ -21,3 +21,11 @@ Contains the compiled coreml models to use directly in storyo or any other xamar
 
 Example command to compile models:
 "path to your applications folder"  /Applications/Xcode.app/Contents/Developer/usr/bin/coremlc compile pytorchModels/book.mlmodel compiled/
+
+# Requirements
+coremltools (0.6.3)
+Xcode 9
+python 2.7
+PyTorch
+torch
+luarocks
