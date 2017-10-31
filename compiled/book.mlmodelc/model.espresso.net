@@ -1,0 +1,1185 @@
+{
+  "storage" : "model.espresso.weights",
+  "properties" : {
+
+  },
+  "format_version" : 200,
+  "layers" : [
+    {
+      "pad_value" : 0,
+      "top" : "ReflectionPad2d_4",
+      "pad_pad_mode" : 0,
+      "pad_t" : 4,
+      "pad_r" : 4,
+      "pad_b" : 4,
+      "type" : "general_padding",
+      "pad_fill_mode" : 2,
+      "bottom" : "inputImage",
+      "pad_l" : 4,
+      "name" : "ReflectionPad2d_4",
+      "weights" : {
+
+      }
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "ConvLayer_3",
+      "blob_weights" : 3,
+      "K" : 3,
+      "blob_biases" : 1,
+      "name" : "Conv2d_5",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 32,
+      "bottom" : "ReflectionPad2d_4",
+      "weights" : {
+
+      },
+      "pad_mode" : 0,
+      "Nx" : 9,
+      "pad_value" : 0,
+      "Ny" : 9,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "ConvLayer_3",
+      "training_instancenorm" : 1,
+      "training_momentum" : 0.9,
+      "training" : 1,
+      "blob_batchnorm_params" : 5,
+      "weights" : {
+
+      },
+      "training_eps" : 1e-05,
+      "top" : "InstanceNormalization_6",
+      "C" : 32,
+      "type" : "batchnorm",
+      "name" : "InstanceNormalization_6"
+    },
+    {
+      "mode" : 0,
+      "weights" : {
+
+      },
+      "top" : "ReLU_7",
+      "type" : "activation",
+      "name" : "ReLU_7",
+      "bottom" : "InstanceNormalization_6"
+    },
+    {
+      "pad_value" : 0,
+      "top" : "ReflectionPad2d_9",
+      "pad_pad_mode" : 0,
+      "pad_t" : 1,
+      "pad_r" : 1,
+      "pad_b" : 1,
+      "type" : "general_padding",
+      "pad_fill_mode" : 2,
+      "bottom" : "ReLU_7",
+      "pad_l" : 1,
+      "name" : "ReflectionPad2d_9",
+      "weights" : {
+
+      }
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "ConvLayer_8",
+      "blob_weights" : 9,
+      "K" : 32,
+      "blob_biases" : 7,
+      "stride_x" : 2,
+      "name" : "Conv2d_10",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "stride_y" : 2,
+      "has_biases" : 1,
+      "C" : 64,
+      "bottom" : "ReflectionPad2d_9",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 0,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "ConvLayer_8",
+      "training_instancenorm" : 1,
+      "training_momentum" : 0.9,
+      "training" : 1,
+      "blob_batchnorm_params" : 11,
+      "weights" : {
+
+      },
+      "training_eps" : 1e-05,
+      "top" : "InstanceNormalization_11",
+      "C" : 64,
+      "type" : "batchnorm",
+      "name" : "InstanceNormalization_11"
+    },
+    {
+      "mode" : 0,
+      "weights" : {
+
+      },
+      "top" : "ReLU_12",
+      "type" : "activation",
+      "name" : "ReLU_12",
+      "bottom" : "InstanceNormalization_11"
+    },
+    {
+      "pad_value" : 0,
+      "top" : "ReflectionPad2d_14",
+      "pad_pad_mode" : 0,
+      "pad_t" : 1,
+      "pad_r" : 1,
+      "pad_b" : 1,
+      "type" : "general_padding",
+      "pad_fill_mode" : 2,
+      "bottom" : "ReLU_12",
+      "pad_l" : 1,
+      "name" : "ReflectionPad2d_14",
+      "weights" : {
+
+      }
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "ConvLayer_13",
+      "blob_weights" : 15,
+      "K" : 64,
+      "blob_biases" : 13,
+      "stride_x" : 2,
+      "name" : "Conv2d_15",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "stride_y" : 2,
+      "has_biases" : 1,
+      "C" : 128,
+      "bottom" : "ReflectionPad2d_14",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 0,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "ConvLayer_13",
+      "training_instancenorm" : 1,
+      "training_momentum" : 0.9,
+      "training" : 1,
+      "blob_batchnorm_params" : 17,
+      "weights" : {
+
+      },
+      "training_eps" : 1e-05,
+      "top" : "InstanceNormalization_16",
+      "C" : 128,
+      "type" : "batchnorm",
+      "name" : "InstanceNormalization_16"
+    },
+    {
+      "mode" : 0,
+      "weights" : {
+
+      },
+      "top" : "ReLU_17",
+      "type" : "activation",
+      "name" : "ReLU_17",
+      "bottom" : "InstanceNormalization_16"
+    },
+    {
+      "pad_value" : 0,
+      "top" : "ReflectionPad2d_20",
+      "pad_pad_mode" : 0,
+      "pad_t" : 1,
+      "pad_r" : 1,
+      "pad_b" : 1,
+      "type" : "general_padding",
+      "pad_fill_mode" : 2,
+      "bottom" : "ReLU_17",
+      "pad_l" : 1,
+      "name" : "ReflectionPad2d_20",
+      "weights" : {
+
+      }
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "ConvLayer_19",
+      "blob_weights" : 21,
+      "K" : 128,
+      "blob_biases" : 19,
+      "name" : "Conv2d_21",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 128,
+      "bottom" : "ReflectionPad2d_20",
+      "weights" : {
+
+      },
+      "pad_mode" : 0,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "ConvLayer_19",
+      "training_instancenorm" : 1,
+      "training_momentum" : 0.9,
+      "training" : 1,
+      "blob_batchnorm_params" : 23,
+      "weights" : {
+
+      },
+      "training_eps" : 1e-05,
+      "top" : "InstanceNormalization_23",
+      "C" : 128,
+      "type" : "batchnorm",
+      "name" : "InstanceNormalization_23"
+    },
+    {
+      "mode" : 0,
+      "weights" : {
+
+      },
+      "top" : "ReLU_25",
+      "type" : "activation",
+      "name" : "ReLU_25",
+      "bottom" : "InstanceNormalization_23"
+    },
+    {
+      "pad_value" : 0,
+      "top" : "ReflectionPad2d_28",
+      "pad_pad_mode" : 0,
+      "pad_t" : 1,
+      "pad_r" : 1,
+      "pad_b" : 1,
+      "type" : "general_padding",
+      "pad_fill_mode" : 2,
+      "bottom" : "ReLU_25",
+      "pad_l" : 1,
+      "name" : "ReflectionPad2d_28",
+      "weights" : {
+
+      }
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "ConvLayer_27",
+      "blob_weights" : 27,
+      "K" : 128,
+      "blob_biases" : 25,
+      "name" : "Conv2d_29",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 128,
+      "bottom" : "ReflectionPad2d_28",
+      "weights" : {
+
+      },
+      "pad_mode" : 0,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "ConvLayer_27",
+      "training_instancenorm" : 1,
+      "training_momentum" : 0.9,
+      "training" : 1,
+      "blob_batchnorm_params" : 29,
+      "weights" : {
+
+      },
+      "training_eps" : 1e-05,
+      "top" : "ResidualBlock_18",
+      "C" : 128,
+      "type" : "batchnorm",
+      "name" : "InstanceNormalization_31"
+    },
+    {
+      "alpha" : 1,
+      "bottom" : "ResidualBlock_18,ReLU_17",
+      "operation" : 0,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "top" : "ResidualBlock_18ADD",
+      "type" : "elementwise",
+      "name" : "InstanceNormalization_32ADD",
+      "beta" : 0
+    },
+    {
+      "pad_value" : 0,
+      "top" : "ReflectionPad2d_35",
+      "pad_pad_mode" : 0,
+      "pad_t" : 1,
+      "pad_r" : 1,
+      "pad_b" : 1,
+      "type" : "general_padding",
+      "pad_fill_mode" : 2,
+      "bottom" : "ResidualBlock_18",
+      "pad_l" : 1,
+      "name" : "ReflectionPad2d_35",
+      "weights" : {
+
+      }
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "ConvLayer_34",
+      "blob_weights" : 33,
+      "K" : 128,
+      "blob_biases" : 31,
+      "name" : "Conv2d_36",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 128,
+      "bottom" : "ReflectionPad2d_35",
+      "weights" : {
+
+      },
+      "pad_mode" : 0,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "ConvLayer_34",
+      "training_instancenorm" : 1,
+      "training_momentum" : 0.9,
+      "training" : 1,
+      "blob_batchnorm_params" : 35,
+      "weights" : {
+
+      },
+      "training_eps" : 1e-05,
+      "top" : "InstanceNormalization_38",
+      "C" : 128,
+      "type" : "batchnorm",
+      "name" : "InstanceNormalization_38"
+    },
+    {
+      "mode" : 0,
+      "weights" : {
+
+      },
+      "top" : "ReLU_40",
+      "type" : "activation",
+      "name" : "ReLU_40",
+      "bottom" : "InstanceNormalization_38"
+    },
+    {
+      "pad_value" : 0,
+      "top" : "ReflectionPad2d_43",
+      "pad_pad_mode" : 0,
+      "pad_t" : 1,
+      "pad_r" : 1,
+      "pad_b" : 1,
+      "type" : "general_padding",
+      "pad_fill_mode" : 2,
+      "bottom" : "ReLU_40",
+      "pad_l" : 1,
+      "name" : "ReflectionPad2d_43",
+      "weights" : {
+
+      }
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "ConvLayer_42",
+      "blob_weights" : 39,
+      "K" : 128,
+      "blob_biases" : 37,
+      "name" : "Conv2d_44",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 128,
+      "bottom" : "ReflectionPad2d_43",
+      "weights" : {
+
+      },
+      "pad_mode" : 0,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "ConvLayer_42",
+      "training_instancenorm" : 1,
+      "training_momentum" : 0.9,
+      "training" : 1,
+      "blob_batchnorm_params" : 41,
+      "weights" : {
+
+      },
+      "training_eps" : 1e-05,
+      "top" : "ResidualBlock_33",
+      "C" : 128,
+      "type" : "batchnorm",
+      "name" : "InstanceNormalization_46"
+    },
+    {
+      "alpha" : 1,
+      "bottom" : "ResidualBlock_33,ResidualBlock_18",
+      "operation" : 0,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "top" : "ResidualBlock_33ADD",
+      "type" : "elementwise",
+      "name" : "InstanceNormalization_47ADD",
+      "beta" : 0
+    },
+    {
+      "pad_value" : 0,
+      "top" : "ReflectionPad2d_50",
+      "pad_pad_mode" : 0,
+      "pad_t" : 1,
+      "pad_r" : 1,
+      "pad_b" : 1,
+      "type" : "general_padding",
+      "pad_fill_mode" : 2,
+      "bottom" : "ResidualBlock_33",
+      "pad_l" : 1,
+      "name" : "ReflectionPad2d_50",
+      "weights" : {
+
+      }
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "ConvLayer_49",
+      "blob_weights" : 45,
+      "K" : 128,
+      "blob_biases" : 43,
+      "name" : "Conv2d_51",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 128,
+      "bottom" : "ReflectionPad2d_50",
+      "weights" : {
+
+      },
+      "pad_mode" : 0,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "ConvLayer_49",
+      "training_instancenorm" : 1,
+      "training_momentum" : 0.9,
+      "training" : 1,
+      "blob_batchnorm_params" : 47,
+      "weights" : {
+
+      },
+      "training_eps" : 1e-05,
+      "top" : "InstanceNormalization_53",
+      "C" : 128,
+      "type" : "batchnorm",
+      "name" : "InstanceNormalization_53"
+    },
+    {
+      "mode" : 0,
+      "weights" : {
+
+      },
+      "top" : "ReLU_55",
+      "type" : "activation",
+      "name" : "ReLU_55",
+      "bottom" : "InstanceNormalization_53"
+    },
+    {
+      "pad_value" : 0,
+      "top" : "ReflectionPad2d_58",
+      "pad_pad_mode" : 0,
+      "pad_t" : 1,
+      "pad_r" : 1,
+      "pad_b" : 1,
+      "type" : "general_padding",
+      "pad_fill_mode" : 2,
+      "bottom" : "ReLU_55",
+      "pad_l" : 1,
+      "name" : "ReflectionPad2d_58",
+      "weights" : {
+
+      }
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "ConvLayer_57",
+      "blob_weights" : 51,
+      "K" : 128,
+      "blob_biases" : 49,
+      "name" : "Conv2d_59",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 128,
+      "bottom" : "ReflectionPad2d_58",
+      "weights" : {
+
+      },
+      "pad_mode" : 0,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "ConvLayer_57",
+      "training_instancenorm" : 1,
+      "training_momentum" : 0.9,
+      "training" : 1,
+      "blob_batchnorm_params" : 53,
+      "weights" : {
+
+      },
+      "training_eps" : 1e-05,
+      "top" : "ResidualBlock_48",
+      "C" : 128,
+      "type" : "batchnorm",
+      "name" : "InstanceNormalization_61"
+    },
+    {
+      "alpha" : 1,
+      "bottom" : "ResidualBlock_48,ResidualBlock_33",
+      "operation" : 0,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "top" : "ResidualBlock_48ADD",
+      "type" : "elementwise",
+      "name" : "InstanceNormalization_62ADD",
+      "beta" : 0
+    },
+    {
+      "pad_value" : 0,
+      "top" : "ReflectionPad2d_65",
+      "pad_pad_mode" : 0,
+      "pad_t" : 1,
+      "pad_r" : 1,
+      "pad_b" : 1,
+      "type" : "general_padding",
+      "pad_fill_mode" : 2,
+      "bottom" : "ResidualBlock_48",
+      "pad_l" : 1,
+      "name" : "ReflectionPad2d_65",
+      "weights" : {
+
+      }
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "ConvLayer_64",
+      "blob_weights" : 57,
+      "K" : 128,
+      "blob_biases" : 55,
+      "name" : "Conv2d_66",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 128,
+      "bottom" : "ReflectionPad2d_65",
+      "weights" : {
+
+      },
+      "pad_mode" : 0,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "ConvLayer_64",
+      "training_instancenorm" : 1,
+      "training_momentum" : 0.9,
+      "training" : 1,
+      "blob_batchnorm_params" : 59,
+      "weights" : {
+
+      },
+      "training_eps" : 1e-05,
+      "top" : "InstanceNormalization_68",
+      "C" : 128,
+      "type" : "batchnorm",
+      "name" : "InstanceNormalization_68"
+    },
+    {
+      "mode" : 0,
+      "weights" : {
+
+      },
+      "top" : "ReLU_70",
+      "type" : "activation",
+      "name" : "ReLU_70",
+      "bottom" : "InstanceNormalization_68"
+    },
+    {
+      "pad_value" : 0,
+      "top" : "ReflectionPad2d_73",
+      "pad_pad_mode" : 0,
+      "pad_t" : 1,
+      "pad_r" : 1,
+      "pad_b" : 1,
+      "type" : "general_padding",
+      "pad_fill_mode" : 2,
+      "bottom" : "ReLU_70",
+      "pad_l" : 1,
+      "name" : "ReflectionPad2d_73",
+      "weights" : {
+
+      }
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "ConvLayer_72",
+      "blob_weights" : 63,
+      "K" : 128,
+      "blob_biases" : 61,
+      "name" : "Conv2d_74",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 128,
+      "bottom" : "ReflectionPad2d_73",
+      "weights" : {
+
+      },
+      "pad_mode" : 0,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "ConvLayer_72",
+      "training_instancenorm" : 1,
+      "training_momentum" : 0.9,
+      "training" : 1,
+      "blob_batchnorm_params" : 65,
+      "weights" : {
+
+      },
+      "training_eps" : 1e-05,
+      "top" : "ResidualBlock_63",
+      "C" : 128,
+      "type" : "batchnorm",
+      "name" : "InstanceNormalization_76"
+    },
+    {
+      "alpha" : 1,
+      "bottom" : "ResidualBlock_63,ResidualBlock_48",
+      "operation" : 0,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "top" : "ResidualBlock_63ADD",
+      "type" : "elementwise",
+      "name" : "InstanceNormalization_77ADD",
+      "beta" : 0
+    },
+    {
+      "pad_value" : 0,
+      "top" : "ReflectionPad2d_80",
+      "pad_pad_mode" : 0,
+      "pad_t" : 1,
+      "pad_r" : 1,
+      "pad_b" : 1,
+      "type" : "general_padding",
+      "pad_fill_mode" : 2,
+      "bottom" : "ResidualBlock_63",
+      "pad_l" : 1,
+      "name" : "ReflectionPad2d_80",
+      "weights" : {
+
+      }
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "ConvLayer_79",
+      "blob_weights" : 69,
+      "K" : 128,
+      "blob_biases" : 67,
+      "name" : "Conv2d_81",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 128,
+      "bottom" : "ReflectionPad2d_80",
+      "weights" : {
+
+      },
+      "pad_mode" : 0,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "ConvLayer_79",
+      "training_instancenorm" : 1,
+      "training_momentum" : 0.9,
+      "training" : 1,
+      "blob_batchnorm_params" : 71,
+      "weights" : {
+
+      },
+      "training_eps" : 1e-05,
+      "top" : "InstanceNormalization_83",
+      "C" : 128,
+      "type" : "batchnorm",
+      "name" : "InstanceNormalization_83"
+    },
+    {
+      "mode" : 0,
+      "weights" : {
+
+      },
+      "top" : "ReLU_85",
+      "type" : "activation",
+      "name" : "ReLU_85",
+      "bottom" : "InstanceNormalization_83"
+    },
+    {
+      "pad_value" : 0,
+      "top" : "ReflectionPad2d_88",
+      "pad_pad_mode" : 0,
+      "pad_t" : 1,
+      "pad_r" : 1,
+      "pad_b" : 1,
+      "type" : "general_padding",
+      "pad_fill_mode" : 2,
+      "bottom" : "ReLU_85",
+      "pad_l" : 1,
+      "name" : "ReflectionPad2d_88",
+      "weights" : {
+
+      }
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "ConvLayer_87",
+      "blob_weights" : 75,
+      "K" : 128,
+      "blob_biases" : 73,
+      "name" : "Conv2d_89",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 128,
+      "bottom" : "ReflectionPad2d_88",
+      "weights" : {
+
+      },
+      "pad_mode" : 0,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "ConvLayer_87",
+      "training_instancenorm" : 1,
+      "training_momentum" : 0.9,
+      "training" : 1,
+      "blob_batchnorm_params" : 77,
+      "weights" : {
+
+      },
+      "training_eps" : 1e-05,
+      "top" : "ResidualBlock_78",
+      "C" : 128,
+      "type" : "batchnorm",
+      "name" : "InstanceNormalization_91"
+    },
+    {
+      "alpha" : 1,
+      "bottom" : "ResidualBlock_78,ResidualBlock_63",
+      "operation" : 0,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "top" : "ResidualBlock_78ADD",
+      "type" : "elementwise",
+      "name" : "InstanceNormalization_92ADD",
+      "beta" : 0
+    },
+    {
+      "bottom" : "ResidualBlock_78",
+      "scaling_factor_y" : 2,
+      "weights" : {
+
+      },
+      "mode" : 0,
+      "top" : "Upsample_94",
+      "scaling_factor_x" : 2,
+      "type" : "upsample",
+      "name" : "Upsample_94"
+    },
+    {
+      "pad_value" : 0,
+      "top" : "ReflectionPad2d_95",
+      "pad_pad_mode" : 0,
+      "pad_t" : 1,
+      "pad_r" : 1,
+      "pad_b" : 1,
+      "type" : "general_padding",
+      "pad_fill_mode" : 2,
+      "bottom" : "Upsample_94",
+      "pad_l" : 1,
+      "name" : "ReflectionPad2d_95",
+      "weights" : {
+
+      }
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "UpsampleConvLayer_93",
+      "blob_weights" : 81,
+      "K" : 128,
+      "blob_biases" : 79,
+      "name" : "Conv2d_96",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 64,
+      "bottom" : "ReflectionPad2d_95",
+      "weights" : {
+
+      },
+      "pad_mode" : 0,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "UpsampleConvLayer_93",
+      "training_instancenorm" : 1,
+      "training_momentum" : 0.9,
+      "training" : 1,
+      "blob_batchnorm_params" : 83,
+      "weights" : {
+
+      },
+      "training_eps" : 1e-05,
+      "top" : "InstanceNormalization_97",
+      "C" : 64,
+      "type" : "batchnorm",
+      "name" : "InstanceNormalization_97"
+    },
+    {
+      "mode" : 0,
+      "weights" : {
+
+      },
+      "top" : "ReLU_98",
+      "type" : "activation",
+      "name" : "ReLU_98",
+      "bottom" : "InstanceNormalization_97"
+    },
+    {
+      "bottom" : "ReLU_98",
+      "scaling_factor_y" : 2,
+      "weights" : {
+
+      },
+      "mode" : 0,
+      "top" : "Upsample_100",
+      "scaling_factor_x" : 2,
+      "type" : "upsample",
+      "name" : "Upsample_100"
+    },
+    {
+      "pad_value" : 0,
+      "top" : "ReflectionPad2d_101",
+      "pad_pad_mode" : 0,
+      "pad_t" : 1,
+      "pad_r" : 1,
+      "pad_b" : 1,
+      "type" : "general_padding",
+      "pad_fill_mode" : 2,
+      "bottom" : "Upsample_100",
+      "pad_l" : 1,
+      "name" : "ReflectionPad2d_101",
+      "weights" : {
+
+      }
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "UpsampleConvLayer_99",
+      "blob_weights" : 87,
+      "K" : 64,
+      "blob_biases" : 85,
+      "name" : "Conv2d_102",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 32,
+      "bottom" : "ReflectionPad2d_101",
+      "weights" : {
+
+      },
+      "pad_mode" : 0,
+      "Nx" : 3,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "UpsampleConvLayer_99",
+      "training_instancenorm" : 1,
+      "training_momentum" : 0.9,
+      "training" : 1,
+      "blob_batchnorm_params" : 89,
+      "weights" : {
+
+      },
+      "training_eps" : 1e-05,
+      "top" : "InstanceNormalization_103",
+      "C" : 32,
+      "type" : "batchnorm",
+      "name" : "InstanceNormalization_103"
+    },
+    {
+      "mode" : 0,
+      "weights" : {
+
+      },
+      "top" : "ReLU_104",
+      "type" : "activation",
+      "name" : "ReLU_104",
+      "bottom" : "InstanceNormalization_103"
+    },
+    {
+      "pad_value" : 0,
+      "top" : "ReflectionPad2d_106",
+      "pad_pad_mode" : 0,
+      "pad_t" : 4,
+      "pad_r" : 4,
+      "pad_b" : 4,
+      "type" : "general_padding",
+      "pad_fill_mode" : 2,
+      "bottom" : "ReLU_104",
+      "pad_l" : 4,
+      "name" : "ReflectionPad2d_106",
+      "weights" : {
+
+      }
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 1,
+      "fused_tanh" : 0,
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "deprocess_image_2",
+      "blob_weights" : 93,
+      "K" : 32,
+      "blob_biases" : 91,
+      "name" : "Conv2d_107",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 3,
+      "bottom" : "ReflectionPad2d_106",
+      "weights" : {
+
+      },
+      "pad_mode" : 0,
+      "Nx" : 9,
+      "pad_value" : 0,
+      "Ny" : 9,
+      "n_parallel" : 1
+    },
+    {
+      "k" : 3,
+      "bottom" : "",
+      "n" : 1,
+      "weights" : {
+
+      },
+      "h" : 1,
+      "constant_blob" : 95,
+      "top" : "deprocess_image_2_constant_in_scale",
+      "w" : 1,
+      "type" : "load_constant",
+      "name" : "deprocess_image_2"
+    },
+    {
+      "k" : 3,
+      "bottom" : "",
+      "n" : 1,
+      "weights" : {
+
+      },
+      "h" : 1,
+      "constant_blob" : 97,
+      "top" : "deprocess_image_2_constant_in_bias",
+      "w" : 1,
+      "type" : "load_constant",
+      "name" : "deprocess_image_2"
+    },
+    {
+      "alpha" : 1,
+      "bottom" : "deprocess_image_2,deprocess_image_2_constant_in_scale",
+      "operation" : 1,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "top" : "deprocess_image_2_mul_out",
+      "type" : "elementwise",
+      "name" : "deprocess_image_2",
+      "beta" : 0
+    },
+    {
+      "alpha" : 1,
+      "bottom" : "deprocess_image_2_mul_out,deprocess_image_2_constant_in_bias",
+      "operation" : 0,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "top" : "outputImage",
+      "type" : "elementwise",
+      "name" : "deprocess_image_2",
+      "beta" : 0
+    }
+  ]
+}
